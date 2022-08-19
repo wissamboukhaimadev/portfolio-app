@@ -17,11 +17,11 @@ const Contact = () => {
     },
   };
 
-  const [openSnackbar,closeSnackbar] = useSnackbar(options);
+  const [openSnackbar, closeSnackbar] = useSnackbar(options);
   const [userInfo, setUserInfo] = useState({
     name: '',
     email: '',
-    messagebody: ''
+    messagebody: '',
   });
   function ValidateEmail(mail) {
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
@@ -35,7 +35,7 @@ const Contact = () => {
     const validEmail = ValidateEmail(userInfo.email);
     if (validEmail) {
       try {
-        await axios.post( process.env.API_URI , {
+        await axios.post('https://apiportfol.herokuapp.com/api/v1/addinfo', {
           name: userInfo.name,
           email: userInfo.email,
           messagebody: userInfo.messagebody,
