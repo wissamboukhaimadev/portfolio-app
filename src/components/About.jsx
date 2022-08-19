@@ -34,7 +34,7 @@ const About = () => {
           <span className="font-bold text-red-300"> Redux </span>.
 
         </p>
-        <p className="text-xl pt-5">This Project helps the company to build invoices faster ( 20 minute to roghly 1 minute )</p>
+        <p className="text-xl pt-5">This Project helps the company to build invoices faster ( 20 minute to 1 minute )</p>
       </div>
     </div>
   );

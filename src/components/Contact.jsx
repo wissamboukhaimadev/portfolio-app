@@ -35,7 +35,7 @@ const Contact = () => {
     const validEmail = ValidateEmail(userInfo.email);
     if (validEmail) {
       try {
-        await axios.post('https://apiportfol.herokuapp.com/api/v1/addinfo', {
+        await axios.post( process.env.API_URI , {
           name: userInfo.name,
           email: userInfo.email,
           messagebody: userInfo.messagebody,
